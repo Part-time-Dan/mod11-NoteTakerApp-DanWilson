@@ -2,6 +2,8 @@
 const express = require('express');
 // import 'path' package
 const path = require('path');
+// notes database
+const notes = require('./db/db.json')
 
 // initialize express
 const app = express();
@@ -16,7 +18,7 @@ app.get('/', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/index.html'))
     );
 
-// route for notes page
+// route for notes page using terms '/api/notes' provided in index.js starter code
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
