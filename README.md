@@ -1,7 +1,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://choosealicense.com/licenses/mit/)
 # EZ Note Taker App
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dw-notetaker-app-ptd-fbb4773f5a25.herokuapp.com/)
 
 ## Description
 This project is a simple note taking app. The objective for this project was to use starter code with all the front-end functionality in place, then route everything on the back-end using Node.js and Express.js.
