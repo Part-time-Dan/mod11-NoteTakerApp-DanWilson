@@ -16,14 +16,13 @@ const PORT = process.env.PORT || 3001;
 // middleware parsing for JSON and urlencoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 // point to folder with code
 app.use(express.static('public'));
 
-// ROUTES
+
+// html ROUTES
 // default routing for landing page
 app.get('/', (req, res) => {
-    console.log("Landed");
     return res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 // route for notes page
@@ -37,18 +36,34 @@ app.get('/notes', (req, res) => {
 // fetch json data
 app.get('/api/notes', (req, res) => {
     console.info(`${req.method} request received`);
-    res.json(notes)
+    return res.status(200).json(notes);
 });
 // post json data
 app.post('/api/notes', (req, res) => {
-    // res.json(`${req.method} request received`);
+    res.json(`${req.method} request received`);
     console.info(`${req.method} request received`);
+
+    let jsonDataPath = path.join(__dirname, './db/db.json')
+
+    const newNote = req.body;
+    // console.log(note);
+
+    notes.push(newNote);
+    // console.log(notes);
+
+    fs.writeFile(jsonDataPath, JSON.stringify(notes), 
+    (writeErr) =>
+            writeErr
+              ? console.error(writeErr)
+              : console.info('Successfully saved note!')
+        );
+
+    res.status(200).json(newNote);
+
 });
 
 
 // BONUS delete POST
-
-
 
 
 // catchall routing back to home
