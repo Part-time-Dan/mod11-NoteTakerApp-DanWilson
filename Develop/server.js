@@ -11,7 +11,7 @@ const notes = require('./db/db.json');
 // initialize express
 const app = express();
 // port for server
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5001;
 // middleware parsing for JSON and urlencoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
