@@ -1,7 +1,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://choosealicense.com/licenses/mit/)
 # EZ Note Taker App
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dw-notetaker-app-ptd-fbb4773f5a25.herokuapp.com/)
+[![Deployed](https://www.herokucdn.com/deploy/button.svg)](https://dw-notetaker-app-ptd-fbb4773f5a25.herokuapp.com/)
 
 ## Description
 This project is a simple note taking app. The objective for this project was to use starter code with all the front-end functionality in place, then route everything on the back-end using Node.js and Express.js.
@@ -14,6 +14,8 @@ The second objective of this project is to deploy using Heroku's web hosting ser
 - [Contributions](#contributions)
 - [Questions](#questions)
 - [License](#license)
+- [Link](#link)
+- [Demo](#demo)
 
 ## Installation
 N/A
@@ -36,3 +38,8 @@ Reach me by email here -> [danielwilson.web@gmail.com](mailto:danielwilson.web@g
 
 ## License
 For additional license information, please follow the link: [MIT](https://choosealicense.com/licenses/mit/)
+
+## Link
+[Heroku Deployment](https://dw-notetaker-app-ptd-fbb4773f5a25.herokuapp.com/)
+
+## Demo
