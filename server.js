@@ -45,10 +45,12 @@ app.post('/api/notes', (req, res) => {
 
     // BONUS assign id to notes so they can be tracked for deletion
     // id will refresh on POST so later when index is applied, number sequences should always align
-    notes.forEach((item, i) => {item.id = i + 1;});
+    notes.forEach((item, i) => {
+        item.id = i + 1;
+    });
     
     // overwrite json database file with string including new object from push
-    fs.writeFile(jsonDataPath, JSON.stringify(notes), 
+    fs.writeFile(jsonDataPath, JSON.stringify(notes, null, 4), 
     (writeErr) =>
             writeErr
               ? console.error(writeErr)
@@ -75,7 +77,7 @@ app.delete('/api/notes/:id', (req, res) => {
     }
 
     // rewrites file with the newly spliced array, preserves 'id' and index sequence until new POST event
-    fs.writeFileSync(jsonDataPath, JSON.stringify(notes), 
+    fs.writeFileSync(jsonDataPath, JSON.stringify(notes, null, 4), 
     (writeErr) =>
             writeErr
               ? console.error(writeErr)
